@@ -10,7 +10,7 @@ function solution(s) {
     } else {
       //여는 괄호가 아닌 닫힌 괄호이면 answer 배열에서 제거,
       //단 answer 배열이 비어 있는 상태면 올바르지 않은 배열(앞에서 여는 배열이 없음)이므로 false
-      if (!answer) return false;
+      if (answer.length === 0) return false;
       // 닫힌 괄호가 올바른 순서로 온 경우 다시 answer 배열(스택)에서 제거
       answer.pop();
     }
@@ -24,12 +24,10 @@ function solution(s) {
 // 1. cnt가 음수이면 false / 2. loop를 다 돌았을 때 cnt가 0이면 true, 0이 아니면 false return
 
 // function solution(s){
-//     let cnt = 0
-//     for (let paren of s) {
-//         cnt += paren === '('? 1: -1
-//         if(cnt < 0) {
-//             return false
-//         }
-//     }
-//     return cnt === 0? true: false;
+//   let stackCount = 0;
+//   for (let i = 0; i < s.length; i++) {
+//       stackCount += s[i] === '(' ? 1 : -1;
+//       if (stackCount < 0) return false;
+//   }
+//   return stackCount === 0;
 // }
