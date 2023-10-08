@@ -10,5 +10,3 @@ function solution(s) {
 
   return stack.length === 0 ? 1 : 0;
 }
-
-// 다른 풀이
